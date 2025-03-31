@@ -2,7 +2,7 @@
 services:
   node-one-folder:
     image: node:20.16-alpine
-    command: ['/bin/sh', '-c', 'ls -l /app']
+    command: ['/bin/sh', '-c', 'ls -l /app && echo ${PWD}']
     volumes:
       - volume-one-folder:/app
 

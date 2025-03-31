@@ -4,7 +4,7 @@ services:
     image: node:20.16-alpine
     volumes:
       - volume-another-folder:/app
-    command: ['/bin/sh', '-c', 'ls -l /app']
+    command: ['/bin/sh', '-c', 'ls -l /app && echo ${PWD}']
 
 volumes:
   volume-another-folder:
