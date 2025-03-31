@@ -1,13 +1,13 @@
 ---
 services:
-  node:
+  node-another-folder:
     image: node:20.16-alpine
     volumes:
-      - volume:/app
+      - volume-another-folder:/app
     command: ['/bin/sh', '-c', 'ls -l /app']
 
 volumes:
-  volume:
+  volume-another-folder:
     driver_opts:
       type: 'none'
       o: 'bind'
