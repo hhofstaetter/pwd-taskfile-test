@@ -9,12 +9,12 @@ includes:
     dir: another-folder
 
 tasks:
-  pwd:
+  start:
     cmds:
-      - echo $PWD
+      - docker-compose up
 
-  all-pwds:
+  all-start:
     cmds:
-      - task: one-folder:pwd
-      - task: another-folder:pwd
-      - task: pwd
+      - task: one-folder:start
+      - task: another-folder:start
+      - task: start

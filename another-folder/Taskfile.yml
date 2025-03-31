@@ -1,6 +1,6 @@
 version: 3
 
 tasks:
-  pwd:
+  start:
     cmds:
-      - echo $PWD
+      - docker-compose up

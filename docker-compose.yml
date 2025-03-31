@@ -1,0 +1,14 @@
+---
+services:
+  node:
+    image: node:20.16-alpine
+    volumes:
+      - volume:/app
+    command: ['/bin/sh', '-c', 'ls -l /app']
+
+volumes:
+  volume:
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '${PWD}'
