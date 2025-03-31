@@ -15,6 +15,7 @@ includes:
 tasks:
   start:
     cmds:
+      - echo $PWD
       - docker-compose up --remove-orphans
       - docker-compose down -v
 
