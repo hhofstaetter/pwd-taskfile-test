@@ -2,4 +2,13 @@
 services:
   node-another-folder:
     image: node:20.16-alpine
-    command: ['/bin/sh', '-c', 'ls -l /app && cron']
+    volumes:
+      - volume-another-folder:/app
+    command: ['/bin/sh', '-c', 'ls -l /app']
+
+volumes:
+  volume-another-folder:
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '${PWD}'

@@ -2,4 +2,13 @@
 services:
   node-this-folder:
     image: node:20.16-alpine
-    command: ['/bin/sh', '-c', 'ls -l /app && cron']
+    command: ['/bin/sh', '-c', 'ls -l /app']
+    volumes:
+      - volume-this-folder:/app
+
+volumes:
+  volume-this-folder:
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '${PWD}'

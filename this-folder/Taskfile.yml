@@ -15,20 +15,11 @@ includes:
 tasks:
   start:
     cmds:
-      - docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d --remove-orphans
-      - docker-compose -f docker-compose.yml -f docker-compose.override.yml logs
-  stop:
-    cmds:
-      - docker-compose -f docker-compose.yml -f docker-compose.override.yml down -v
+      - docker-compose up --remove-orphans
+      - docker-compose down -v
 
   all-start:
     cmds:
       - task: one-folder:start
       - task: another-folder:start
       - task: start
-
-  all-stop:
-    cmds:
-      - task: one-folder:stop
-      - task: another-folder:stop
-      - task: stop
