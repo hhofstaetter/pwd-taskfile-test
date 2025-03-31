@@ -5,8 +5,14 @@
 3 different folders with docker-compose files in them. Each file mounts the current folder into the container.
 
 Environment:
-Ubuntu 24.04
-Docker and Task installed through https://docs.wakemeops.com/ 
+* Ubuntu 24.04
+* Docker and Task installed through https://docs.wakemeops.com/ 
+
+Tested with:
+* Docker version: 27.2.1 & 28.0.4
+* Docker Compose: 2.29.2 & 2.34.0
+* containerd.io: 1.7.21 & 1.7.26
+* go-task: 3.41.0 & 3.42.1
 
 ## go-task 3.41.0
 
