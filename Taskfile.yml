@@ -4,9 +4,13 @@ includes:
   one-folder:
     taskfile: one-folder/Taskfile.yml
     dir: one-folder
+    optional: true
+    internal: true
   another-folder:
     taskfile: another-folder/Taskfile.yml
     dir: another-folder
+    optional: true
+    internal: true
 
 tasks:
   start:
