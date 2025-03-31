@@ -1,0 +1,12 @@
+---
+services:
+  node-another-folder:
+    volumes:
+      - volume-another-folder:/app
+
+volumes:
+  volume-another-folder:
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '${PWD}'

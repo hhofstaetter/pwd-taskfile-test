@@ -3,4 +3,8 @@ version: 3
 tasks:
   start:
     cmds:
-      - docker-compose up --remove-orphans
+      - docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d --remove-orphans
+      - docker-compose -f docker-compose.yml -f docker-compose.override.yml logs
+  stop:
+    cmds:
+      - docker-compose -f docker-compose.yml -f docker-compose.override.yml down -v

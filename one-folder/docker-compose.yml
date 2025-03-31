@@ -2,13 +2,5 @@
 services:
   node-one-folder:
     image: node:20.16-alpine
-    volumes:
-      - volume-one-folder:/app
-    command: ['/bin/sh', '-c', 'ls -l /app']
+    command: ['/bin/sh', '-c', 'ls -l /app && cron']
 
-volumes:
-  volume-one-folder:
-    driver_opts:
-      type: 'none'
-      o: 'bind'
-      device: '${PWD}'
