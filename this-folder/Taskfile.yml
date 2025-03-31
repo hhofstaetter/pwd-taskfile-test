@@ -16,7 +16,7 @@ tasks:
   start:
     cmds:
       - echo $PWD
-      - docker-compose up --remove-orphans
+      - "PWD={{.TASKFILE_DIR}} docker-compose up --remove-orphans"
       - docker-compose down -v
 
   all-start:
